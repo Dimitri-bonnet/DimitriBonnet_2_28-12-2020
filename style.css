@@ -1,62 +1,72 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
-body, html, ul{
+body, html, ul, h3{
     font-family:  'Raleway', sans-serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
 }
 nav, main{
     padding: 0 1.2rem;
 }
-
 /* Nav */
 .NavBar {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     list-style:none;
-    flex-wrap: wrap;
-    
+    flex-wrap: wrap;  
 }
 .NavBar li:first-child {
     margin-right: auto;
 }
 .NavBar a {
     margin: 10px;
-    border-radius: 5px;
     color:  #0065FC;
     display: block;
-      text-decoration: none;
+    text-decoration: none;
+    padding: 1rem;
+    border: 2px solid white;
+}
+.NavBar a:active{
+    border-top: 2px solid #0065FC;
 }
 /* Main search */
 .search{
-    padding: 1em 0;
+    padding: 0.5rem 0;
 }
 .search p {
     font-size: 12px;
-    margin-top: 0.5em;
+    margin-top: 0.5rem;
 }
-
 .inputSearch{
-    padding: 1em 0;
+    display: flex;
 }
-.inputSearch button {
-    padding: 5px;
+.inputSearch input{
+    float: left;
+    width: 150px;
+    border: 1px solid #F2F2F2;
+    border-left: none ; 
+    border-right: none ;
+}
+.inputSearch input::placeholder{
+    font-weight: bold;
+    color: black;
+}
+.inputSearch button, .inputSearch i {
+    padding: 0.6rem 0.8rem;
+    border: none;
+}
+.inputSearch button{
     background:  #0065FC;
     color: white;
-}
-.inputSearch input {
-    padding: 10px 5px;
-    border: 0;
-    background: rgb(255, 255, 255);
-    border-radius: 3px 0 0 3px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
 }
 .inputSearch i {
     background: #F2F2F2;
-    padding: 5px;
-    
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
 
@@ -65,24 +75,33 @@ nav, main{
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    padding:  0.5rem 0;
+}
+.filters p {
+    margin-right: 1rem;
+    font-weight: bold;
+}
+
+.filters div {
+    border : 2px solid #F2F2F2;
+    border-radius: 36px;
 }
 .filters button{
-    border-radius: 36px;
-    border : 1px solid #F2F2F2;
+    border: none;
     background-color:white;
-    font-weight: 600;
-    padding: 8px;
-    
+    font-weight: 600; 
+    margin-right: 1rem;
+    padding: 8px; 
 }
-.filters span{
-    margin: 0 10px 0 10px;
-}
-.filters button i {
+.filters div i {
     background: #DEEBFF;
     color:  #0065FC;
-    border-radius: 50%;
-    padding: 8px;
-    
+    border-radius: 36px;
+    padding: 0.5rem;
+    float: left;
+}
+.info {
+    padding: 1rem 0;
 }
 .info span{
 	float: left;
@@ -103,43 +122,121 @@ nav, main{
 .flex{
     display: flex;
     flex-direction: row;
-  
-    flex-wrap: wrap;
-    
+    /* background: blueviolet; */
 }
+/* BIG */
 .big {
-    width: 70%;
+    width: 60vw;
     background:#F2F2F2;
     border-radius: 18px;
+    margin-right: 2vw;
+    padding: 0 1rem;
 }
 .big .row {
     display: flex;
-    flex-direction: row;
-    justify-content:space-around;
-    flex-wrap: wrap;
-    
+    flex-wrap: wrap;  
 }
-.big .row .card {
-    border : 1px solid #000000;
-    width: 25%;
-    background: white; 
+.big .row .item {
+    flex: 1;
+    margin: 10px;
+    /* background-color: blue; */
+}
+.big .card {
+    background: white;
     border-radius: 16px;
-
+    padding: 0.2rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    min-width: 16vw;
+}
+.big .card .card-img{
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    height: 120px;
+    width: 100%;
+    object-fit: cover;
+}
+.big .card .card-content{
+    padding: 0.5rem 1rem;
+}
+.big .card .card-title{
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 500px
 }
 
+.big .card .card-price{
+    font-weight: bold; 
+}
+.big .card .stars i:not(.gray) {
+    color: #0065FC;
+}
+.big .stars .gray{
+    color: rgb(190, 190, 190);
+}
+.big .card-content span {
+    font-weight: bold;
+}
+ /* SMALL */
 .small {
-    width: 25%;
+    width: 40vw;
     background:#F2F2F2;
     border-radius: 18px;
-    padding: 0 1.2rem;
+    padding: 0 1rem;
+}
+.small .title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.small .item{
+    flex: 1;
+    margin: 20px;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    
 }
 .small .card {
-    width: 100%;
+    display: flex;
+    align-items: center; 
+    width: 80%;
+    max-height: 500%;
+    padding: 0.2rem;
     background: white; 
     border-radius: 16px;
-    border : 1px solid #000000;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.small .card .card-img{
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+}
+.small .card .card-content{
+    padding: 1rem;  
+    
+}
+.small .card .card-title{
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 500px
+}
+.small .card .stars i:not(.gray) {
+    color: #0065FC;
+}
+.small .stars .gray{
+    color: rgb(190, 190, 190);
+}
+.small .card-content span {
+    font-weight: bold;
 }
 
+/* Main activites */
+.container{
+    display: flex;
+}
 /* Footer */
 footer{
     display: flex;
