@@ -23,8 +23,6 @@ nav, #header-main{
     list-style:none;
     flex-wrap: wrap;  
 }
-
-
 .NavBar li:first-child {
     margin-right: auto;
 }
@@ -35,6 +33,9 @@ nav, #header-main{
     text-decoration: none;
     padding: 1rem;
     border: 2px solid white;
+}
+.NavBar .signup{
+    font-weight: 700;
 }
 .NavBar a:active{
     border-top: 2px solid #0065FC;
@@ -311,9 +312,13 @@ footer p {
 @media (max-width: 800px) {
     .NavBar :nth-child(4) {
         order: -1;
+        font-weight: 700;
     }
     .NavBar :nth-child(1) {
         order: -2;
+    }
+    .NavBar a:not(.signup){
+        border-bottom: 2px solid;   
     }
     .content-button{ 
         flex-direction: column;
