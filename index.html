@@ -12,12 +12,26 @@
 <body>
 <header>
   <nav>
-    <ul class="NavBar" >
-        <li class="logo"><img src="./img/logo/Reservia.svg" alt=""></li>
-        <li class="item"><a href="#hebergement"> Hébergement</a></li>
-        <li class="item"><a href="#activites">Activités</a></li>
-        <li class="item"><a class="signup" href="">S'inscrire</a></li>
+    <ul class="navBar" >
+        <li><img src="./img/logo/Reservia.svg" alt=""></li>
+        <li><a class="isActive" href="#hebergement"> Hébergement</a></li>
+        <li><a href="#activites">Activités</a></li>
+        <li><a class="signup" href="">S'inscrire</a></li>
     </ul>
+    <ul class="navBarResponsive">
+      <div class="first">
+        <li class="logo"><img src="./img/logo/Reservia.svg" alt=""></li>
+        <li class="item"><a class="signup" href="">S'inscrire</a></li>
+      </div>
+      <div class="second">
+        <li class="item isActive">
+          <a  href="#hebergement"> Hébergement</a>
+        </li>
+        <li class="item">
+          <a href="#activites">Activités</a>
+        </li>
+      </div>
+  </ul>
   </nav>
 </header>
 <main>
@@ -27,15 +41,16 @@
       <p>En plein centre ville ou en pleine nature</p>
       <div >
         <form class="inputSearch">
-          <i class="fas fa-map-marker-alt"></i>
+          <i class="localisation fas fa-map-marker-alt"></i>
           <input type="search" placeholder="Marseille, France">
           <button>Rechercher</button>
+          <i class="search fas fa-search"></i>
         </form>
       </div>
     </div>
     <div class="filters">
       <p>Filtres</p>
-      <div class="content-button">
+      <div class="content-button-filters">
         <div>
           <i class="fas fa-money-bill-wave"></i> 
           <button>Économie</button>

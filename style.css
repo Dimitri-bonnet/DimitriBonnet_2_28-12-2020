@@ -7,7 +7,7 @@ body, html, ul, h3{
     margin: 0;
     padding: 0;
 }
-nav, #header-main{
+.navBar, #header-main{
      padding: 0 1.2rem; 
 }
 #hebergement {
@@ -15,7 +15,7 @@ nav, #header-main{
     padding: 0 1.2rem; 
 }
 /* Nav */
-.NavBar {
+.navBar {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -23,10 +23,10 @@ nav, #header-main{
     list-style:none;
     flex-wrap: wrap;  
 }
-.NavBar li:first-child {
+.navBar li:first-child {
     margin-right: auto;
 }
-.NavBar a {
+.navBar a {
     margin: 10px;
     color:  #0065FC;
     display: block;
@@ -34,13 +34,15 @@ nav, #header-main{
     padding: 1rem;
     border: 2px solid white;
 }
-.NavBar .signup{
+.navBar .signup{
     font-weight: 700;
 }
-.NavBar a:active{
-    border-top: 2px solid #0065FC;
+.navBar .isActive{
+    border-top: 3px solid #0065FC;
 }
-
+.navBarResponsive{
+    display: none;
+}
 
 /* Main search */
 .search{
@@ -55,7 +57,7 @@ nav, #header-main{
 }
 .inputSearch input{
     float: left;
-    width: 150px;
+    width: 200px;
     border: 1px solid #F2F2F2;
     border-left: none ; 
     border-right: none ;
@@ -63,6 +65,7 @@ nav, #header-main{
 .inputSearch input::placeholder{
     font-weight: bold;
     color: black;
+    padding: 1rem;
 }
 .inputSearch button, .inputSearch i {
     padding: 0.6rem 0.8rem;
@@ -74,10 +77,13 @@ nav, #header-main{
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
 }
-.inputSearch i {
+.inputSearch .localisation  {
     background: #F2F2F2;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
+}
+.inputSearch .search{
+    display: none;
 }
 
 
@@ -88,31 +94,28 @@ nav, #header-main{
     padding:  0.5rem 0;
 }
 
- .filters p {
+.filters p {
     margin-right: 1rem;
     font-weight: bold;
 }
-.content-button{
+.content-button-filters{
     display: flex;
     flex-direction: row;
     align-items: center;
     
 }
-.content-button div {
+.content-button-filters div {
     border-top: 2px solid #F2F2F2;;
     border-bottom: 2px solid #F2F2F2;;
     border-right: 2px solid #F2F2F2;; 
     border-radius: 36px;
-    margin-right: 20px;
-   
-    
+    margin-right: 20px;   
 }
 .filters button{
     border: none;
     background-color:white;
     font-weight: 600; 
     margin-right: 1rem;
-    
 }
 .filters div i {
     background: #DEEBFF;
@@ -142,10 +145,7 @@ nav, #header-main{
 .flex{
     display: flex;
     flex-direction: row;
-    /* background: blueviolet; */
 }
-
-
 /* BIG */
 .big {
     flex: 70%;
@@ -161,7 +161,6 @@ nav, #header-main{
 .big .row .item {
     flex: 1;
     margin: 10px;
-    /* background-color: blue; */
 }
 .big .card {
     background: white;
@@ -243,7 +242,8 @@ nav, #header-main{
     margin-bottom: 500px
 }
 .small .card .stars {
-    align-self: flex-end;
+ align-self: flex-end;  
+
 }
 .small .card .stars i:not(.gray) {
     color: #0065FC;
@@ -304,37 +304,41 @@ footer{
     display: flex;
     flex-direction: row;
     align-self: start;
+    flex-wrap: nowrap;
     background: #F2F2F2;
     padding: 0 2rem;
-    width: 100%;
+    
 }
 footer div{
-  margin-right: 250px; 
+  width: 100%;
 }
 footer p {
     font-size: 14px;
 }
 /* Responsive */
 @media (max-width: 800px) {
-    .NavBar :nth-child(4) {
+   
+/*    .navBar :nth-child(4) {
         order: -1;
         font-weight: 700;
     }
-    .NavBar :nth-child(1) {
+    .navBar :nth-child(1) {
         order: -2;
-    }
-    .NavBar a:not(.signup){
+    } 
+    .navBar a:not(.signup){
         border-bottom: 2px solid;   
-    }
-    .content-button{ 
+    } */
+    .content-button-filters{ 
         flex-direction: column;
         width: 210px;
         align-items: flex-start;
         
     }
-    .content-button div{ 
+    .content-button-filters div{ 
         margin: 0.3rem 0;
     }
+    
+  
     .filters {
         flex-direction: column;  
     }
@@ -349,7 +353,7 @@ footer p {
         flex-direction: column;
     }
     .small .card .card-content,.big .card .card-content{
-        padding: 1rem;
+        padding: 0.4rem;
         font-size: 12px;   
     }
     #hebergement{
@@ -370,10 +374,69 @@ footer p {
         flex-direction: column;
         padding:  0.5rem 2rem;
     }
-    footer div{
-        margin-right: 0px; 
-      }
+
     .row-activites{
         flex-direction: column;
+    }
+  }
+
+  @media (max-width: 540px) {
+    .navBar{
+        display: none;
+    }
+    .navBarResponsive{
+        display: block;
+        list-style: none;
+        margin-bottom: 10px;
+    }
+    .navBarResponsive .first{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1.2rem;
+    }
+    .first .item a{
+        color:  #0065FC;
+        text-decoration: none;
+        font-weight: 700;
+    }
+    .navBarResponsive .second{
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+    }
+  
+    .second li {  
+        padding:  1.2rem 0;
+        border-bottom: 3px solid #F2F2F2;
+    }
+    .second li:first-child{
+        padding:  1.2rem 0;
+        border-bottom: 3px solid  #0066ff;
+    }
+    .second .item{
+        flex: 50%;   
+    }
+    .second .item a {
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 700;
+        color: black;
+        margin-bottom: 50px;
+    }
+    .second .isActive a  {
+        color:  #0066ff;
+        text-decoration: none;
+        
+    }
+    .inputSearch button{
+        display: none;
+    }
+    .inputSearch .search{
+        display: block;
+        background-color: #0065FC;
+        color: white;
+        border-radius: 10px;
     }
   }
