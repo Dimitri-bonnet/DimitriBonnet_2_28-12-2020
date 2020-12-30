@@ -241,10 +241,7 @@ body, html, ul, h3{
     font-weight: bold;
     margin-bottom: 500px
 }
-.small .card .stars {
- align-self: flex-end;  
 
-}
 .small .card .stars i:not(.gray) {
     color: #0065FC;
 }
@@ -369,7 +366,10 @@ footer p {
     .big-card, .litle-card {
         margin: 1rem 0;
     }
-    
+    .small .card .card-img{
+        width: 100px;
+        height: 100px;
+    }
     footer{
         flex-direction: column;
         padding:  0.5rem 2rem;
