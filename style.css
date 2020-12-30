@@ -302,11 +302,17 @@ nav, #header-main{
 /* Footer */
 footer{
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    align-self: start;
     background: #F2F2F2;
+    padding: 0 2rem;
+    width: 100%;
+}
+footer div{
+  margin-right: 250px; 
 }
 footer p {
-    font-size: 11px;
+    font-size: 14px;
 }
 /* Responsive */
 @media (max-width: 800px) {
@@ -361,7 +367,7 @@ footer p {
     }
     
     footer{
-        display: block ;
+        flex-direction: column;
         padding:  0.5rem 2rem;
     }
     .row-activites{
