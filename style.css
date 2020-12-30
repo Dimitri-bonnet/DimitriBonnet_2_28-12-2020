@@ -1,22 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-
+* {
+    box-sizing: border-box; 
+}
 body, html, ul, h3{
     font-family:  'Raleway', sans-serif;
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-nav, main{
-    padding: 0 1.2rem;
+nav, #header-main{
+     padding: 0 1.2rem; 
+}
+#hebergement {
+ 
+    padding: 0 1.2rem; 
 }
 /* Nav */
 .NavBar {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: flex-end;
     list-style:none;
     flex-wrap: wrap;  
 }
+
+
 .NavBar li:first-child {
     margin-right: auto;
 }
@@ -31,6 +39,8 @@ nav, main{
 .NavBar a:active{
     border-top: 2px solid #0065FC;
 }
+
+
 /* Main search */
 .search{
     padding: 0.5rem 0;
@@ -73,32 +83,36 @@ nav, main{
 /* Main filters*/
 .filters {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
     padding:  0.5rem 0;
 }
-.filters p {
+
+ .filters p {
     margin-right: 1rem;
     font-weight: bold;
 }
 
 .filters div {
-    border : 2px solid #F2F2F2;
+    /* border : 2px solid #F2F2F2; */
+    border-top: 2px solid #F2F2F2;;
+    border-bottom: 2px solid #F2F2F2;;
+    border-right: 2px solid #F2F2F2;; 
     border-radius: 36px;
+    margin-right: 20px;
 }
 .filters button{
     border: none;
     background-color:white;
     font-weight: 600; 
     margin-right: 1rem;
-    padding: 8px; 
+    
 }
 .filters div i {
     background: #DEEBFF;
     color:  #0065FC;
     border-radius: 36px;
     padding: 0.5rem;
-    float: left;
+  
 }
 .info {
     padding: 1rem 0;
@@ -124,10 +138,12 @@ nav, main{
     flex-direction: row;
     /* background: blueviolet; */
 }
+
+
 /* BIG */
 .big {
-    width: 60vw;
-    background:#F2F2F2;
+    flex: 60%;
+    background:#F2F2F2; 
     border-radius: 18px;
     margin-right: 2vw;
     padding: 0 1rem;
@@ -178,10 +194,10 @@ nav, main{
 }
  /* SMALL */
 .small {
-    width: 40vw;
+    flex: 30%;
     background:#F2F2F2;
     border-radius: 18px;
-    padding: 0 1rem;
+    padding: 0 0.8rem;
 }
 .small .title{
     display: flex;
@@ -190,7 +206,6 @@ nav, main{
     
 }
 .small .item{
-    flex: 1;
     margin: 20px;
     /* background-color: blue; */
     display: flex;
@@ -200,8 +215,7 @@ nav, main{
 .small .card {
     display: flex;
     align-items: center; 
-    width: 80%;
-    max-height: 500%;
+    width: 100%;
     padding: 0.2rem;
     background: white; 
     border-radius: 16px;
@@ -223,6 +237,9 @@ nav, main{
     font-weight: bold;
     margin-bottom: 500px
 }
+.small .card .stars {
+    align-self: flex-end;
+}
 .small .card .stars i:not(.gray) {
     color: #0065FC;
 }
@@ -234,9 +251,24 @@ nav, main{
 }
 
 /* Main activites */
-.container{
+.row-activites {
     display: flex;
-}
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 0 4px;
+    
+  }
+.column {
+    flex: 20%;
+    max-width: 25%;
+    background-color: blue;
+    margin: 10px;
+  }
+  .column img {
+    margin-top: 8px;
+    width: 300px;
+    height: 200px;
+  }
 /* Footer */
 footer{
     display: flex;
@@ -246,3 +278,35 @@ footer{
 footer p {
     font-size: 11px;
 }
+/* Responsive */
+@media (max-width: 800px) {
+    .NavBar :nth-child(4) {
+        order: -1;
+    }
+    .NavBar :nth-child(1) {
+        order: -2;
+    }
+    .flex {
+        flex-direction: column;
+        flex-direction: column-reverse;
+    }
+    .big{
+        background:white !important;
+    }
+    .big .row{
+        flex-direction: column;
+    }
+    .filters{
+      
+    }
+    #hebergement{
+       padding: 0;
+    }
+    footer{
+        display: block ;
+        padding:  0.5rem 2rem;
+    }
+    .row-activites{
+        flex-direction: column;
+    }
+  }
