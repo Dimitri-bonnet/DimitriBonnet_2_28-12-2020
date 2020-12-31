@@ -407,11 +407,11 @@ footer p {
         text-align: center;
     }
   
-    .second li {  
+    .second span {  
         padding:  1.2rem 0;
         border-bottom: 3px solid #F2F2F2;
     }
-    .second li:first-child{
+    .second span:first-child{
         padding:  1.2rem 0;
         border-bottom: 3px solid  #0066ff;
     }
