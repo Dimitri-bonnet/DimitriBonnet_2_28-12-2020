@@ -341,8 +341,8 @@ padding: 0 1.2rem 0 1.2rem;
 }
 .big-card img{
     object-fit: cover;
-    width: 300px;
-    height: 400px;
+    width: 20vw;
+    height: 60vh;
     border-top-left-radius:16px;
     border-top-right-radius:16px;
     vertical-align: middle;
@@ -360,31 +360,13 @@ padding: 0 1.2rem 0 1.2rem;
 }
 .litle-card img {
     object-fit: cover;
-    width: 300px;
-    height: 150px;
+    width: 25vw;
+    height: 24vh;
     border-top-left-radius:16px;
     border-top-right-radius:16px;
     vertical-align: middle;
 }
-@media (min-width: 1440px) {
-  
-    .litle-card img {
-        object-fit: cover;
-        width: 350px;
-        height: 150px;
-    }
-    .big-card img{
-        object-fit: cover;
-        width: 400px;
-        height: 400px;
-        border-top-left-radius:16px;
-        border-top-right-radius:16px;
-        vertical-align: middle;
-    }
    
-    
-  }
-    
 /* Footer */
 footer{
     display: flex;
