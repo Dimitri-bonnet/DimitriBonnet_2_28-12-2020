@@ -366,7 +366,7 @@ padding: 0 1.2rem 0 1.2rem;
     border-top-right-radius:16px;
     vertical-align: middle;
 }
-@media (min-width: 1481px) {
+@media (min-width: 1440px) {
   
     .litle-card img {
         object-fit: cover;
