@@ -7,28 +7,16 @@
     <link type="text/css" rel="stylesheet" href="style.css">
     <!-- FONTAWESOME -->
     <script src="https://kit.fontawesome.com/a13498b757.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>Reservia</title>
 </head>
 <body>
-<header>
-  <nav>
-    <ul class="navBar" >
-        <li><img src="./img/logo/Reservia.svg" alt=""></li>
-        <li><a class="isActive" href="#hebergement"> Hébergement</a></li>
-        <li><a href="#activites">Activités</a></li>
-        <li><a class="signup" href="">S'inscrire</a></li>
-    </ul>
-    <div class="navBarResponsive">
-      <div class="first">
-        <span class="logo"><img src="./img/logo/Reservia.svg" alt=""></span>
-        <span class="item"><a class="signup" href="">S'inscrire</a></span>
-      </div>
-      <div class="second">
-        <span class="item isActive"><a  href="#hebergement"> Hébergement</a></span>
-        <span class="item"><a href="#activites">Activités</a></span>
-      </div>
-    </div>
-  </nav>
+<header class="header">
+    <img  class="nav-link-img"src="./img/logo/Reservia.svg" alt="">
+    <nav class="nav-bar">
+      <a  class="nav-link is-active"href="#hebergement">Hébergement</a>
+      <a  class="nav-link"href="#activites">Activités</a>
+    </nav>
+    <a class="nav-link-signup" href="">S'inscrire</a>
 </header>
 <main>
   <section id="header-main">
@@ -80,6 +68,7 @@
         </div>
         <div class="row">
           <div class="item">
+            <a href="">
             <div class="card">
               <img class="card-img" src="./img/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="" >
               <div class="card-content">
@@ -90,8 +79,10 @@
                 </div>
               </div>
             </div>
+          </a>
           </div>
           <div class="item">
+            <a href="">
             <div class="card">
               <img class="card-img" src="./img/hebergements/3_medium/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="" >
               <div class="card-content">
@@ -100,11 +91,13 @@
                 <div class="stars">
                   <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class=" fas fa-star"></i>
                 </div>
-              </div>
+              </div>        
             </div>
+          </a>
           </div>
           <div class="item">
-            <div class="card">
+            <a href="">
+            <div class="card">          
               <img class="card-img" src="./img/hebergements/3_medium/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="" >
               <div class="card-content">
                 <span class="card-title">Hôtel Les mouettes</span><br>
@@ -112,10 +105,12 @@
                 <div class="stars">
                   <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="gray fas fa-star"></i>
                 </div>
-              </div>
+              </div>           
             </div>
+           </a>
           </div>
           <div class="item">
+            <a href="">
             <div class="card">
               <img class="card-img" src="./img/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="">
               <div class="card-content">
@@ -126,9 +121,11 @@
                 </div>
               </div>
             </div>
+            </a>
           </div>
           <div class="item">
-            <div class="card">
+            <a href="">
+            <div class="card">  
               <img class="card-img" src="./img/hebergements/3_medium/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="" >
               <div class="card-content">
                 <span class="card-title">Auberge Le Panier</span><br>
@@ -138,8 +135,10 @@
                 </div>
               </div>
             </div>
+          </a>
           </div>
           <div class="item">
+            <a href="">
             <div class="card">
               <img class="card-img" src="./img/hebergements/3_medium/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="" >
               <div class="card-content">
@@ -150,6 +149,7 @@
                 </div>
               </div>
             </div>
+            </a>
           </div>
         </div>
         <h4>Afficher plus</h4>
@@ -159,6 +159,7 @@
           <h4>Les plus populaires</h4>
           <i class="fas fa-chart-line"></i> 
         </div>
+        <a href="">
         <div class="item">
           <div class="card">
             <img class="card-img" src="./img/hebergements/3_medium/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="" >
@@ -171,6 +172,8 @@
             </div>
           </div>
         </div>
+      </a>
+      <a href="">
         <div class="item">
           <div class="card">
             <img class="card-img" src="./img/hebergements/3_medium/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="" >
@@ -183,6 +186,8 @@
             </div>
           </div> 
         </div>
+      </a>
+      <a href="">
         <div class="item">
           <div class="card">
             <img class="card-img" src="./img/hebergements/3_medium/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="" >
@@ -195,6 +200,7 @@
             </div>
           </div> 
         </div>
+      </a>
       </div>
     </div>
   </section>
@@ -202,32 +208,46 @@
     <h4>Activités à Marseille</h4>
     <div class="row-activites">
       <div class="big-card"> 
-        <img src="./img/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="">
-        <h4 class="title">Vieux port</h4>
+        <a href="">
+          <img src="./img/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="">
+          <h4 class="title">Vieux port</h4>
+        </a>
       </div>
-      <div class="column-activites">
+      <div class="column-activites"> 
         <div class="litle-card">
-          <img src="./img/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="">
-          <h4 class="title">Fort de Pomègues</h4>
+          <a href="">
+            <img src="./img/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="">
+            <h4 class="title">Fort de Pomègues</h4>
+          </a>
         </div>
         <div class="litle-card">
-          <img src="./img/activites/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="">
-          <h4 class="title">Fort de Pomègues</h4>
+          <a href="">
+            <img src="./img/activites/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="">
+            <h4 class="title">Fort de Pomègues</h4>
+          </a>
         </div>
       </div>
       <div class="big-card">
-        <img src="./img/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="">
-        <h4 class="title">Fort de Pomègues</h4>
+        <a href="">
+          <img src="./img/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="">
+          <h4 class="title">Fort de Pomègues</h4>
+        </a>
       </div>
       <div class="column-activites">
+       
         <div class="litle-card">
-          <img src="./img/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="">
-          <h4 class="title">Fort de Pomègues</h4>
+          <a href="">
+            <img src="./img/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="">
+            <h4 class="title">Fort de Pomègues</h4>
+        </a>
         </div>
         <div class="litle-card">
-          <img src="./img/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="">
-          <h4 class="title">Fort de Pomègues</h4>
+          <a href="">
+            <img src="./img/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="">
+            <h4 class="title">Fort de Pomègues</h4>
+          </a>
         </div>
+     
       </div>
     </div>
   </section> 
