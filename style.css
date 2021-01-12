@@ -10,7 +10,7 @@ body, html, ul, h3{
  #header-main, #hebergement{
 padding: 0 1.2rem 0 1.2rem;
 }
-
+/* NAV */
 .header{
     display: grid;
     align-items: center;
@@ -37,7 +37,8 @@ padding: 0 1.2rem 0 1.2rem;
     border-top: 3px transparent solid;
     border-bottom: 3px transparent solid;
 }
-.nav-link{
+.nav-link {
+    
     color: initial;
 }
 .nav-link-signup{
@@ -74,9 +75,9 @@ padding: 0 1.2rem 0 1.2rem;
         border-top: none;
         border-bottom: 3px solid #F2F2F2;
         width: 50%;
-        color: initial;
     }
     .nav-bar .is-active {
+        color: #0065FC;
         border-bottom-color: #0065FC;
     }
 } 
